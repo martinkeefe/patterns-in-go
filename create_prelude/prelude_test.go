@@ -42,3 +42,16 @@ func TestRoomNo(t *testing.T) {
 		t.Errorf("TestRoomNo : ok == %t", ok)
 	}
 }
+
+func TestClone(t *testing.T) {
+	r1 := NewRoom(23)
+	r2 := r1.Clone()
+	p1 := r1
+	p2 := r2.(*room)
+	if p1 == p2 {
+		t.Errorf("TestClone : %p == %p", p1, p2)
+	}
+	if r2.RoomNumber() != 23 {
+		t.Errorf("TestClone : %d != 23", r2.RoomNumber())
+	}
+}

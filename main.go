@@ -1,7 +1,7 @@
 package main
 
-import "patterns/create_03"
+import "patterns/create_04"
 
 func main() {
-	create_03.Main()
+	create_04.Main()
 }
